@@ -75,7 +75,7 @@
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="item center">
                     <figure class="img-box">
-                        <a href="#"><img src="{{ asset('uploads') }}/images/about/{{ $about->vision_image }}" alt=""></a>
+                        <a href="#"><img src="{{ asset('uploads') }}/images/about/{{ $about->vision_image}}" alt=""></a>
                     </figure>
                     <div class="content">
                         <h4>Our Vision</h4>

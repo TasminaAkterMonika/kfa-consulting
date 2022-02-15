@@ -30,13 +30,28 @@ Route::resource('aboutus','AboutusController');
 // End Routes for aboutus 
 
                     
-// Start Routes for ourteam 
-Route::resource('ourteam','OurteamController');
-// End Routes for ourteam 
-
-                    
 // Start Routes for ourachivement 
 Route::resource('ourachivement','OurachivementController');
 // End Routes for ourachivement 
+
+                    
+// Start Routes for faq 
+Route::resource('faq','FaqController');
+// End Routes for faq 
+
+                    
+// Start Routes for testimonial 
+Route::resource('testimonial','TestimonialController');
+// End Routes for testimonial 
+
+                    
+// Start Routes for ourservice 
+Route::resource('ourservice','OurserviceController');
+// End Routes for ourservice 
+
+                    
+// Start Routes for ourteam 
+Route::resource('ourteam','OurteamController');
+// End Routes for ourteam 
 
                     ?>

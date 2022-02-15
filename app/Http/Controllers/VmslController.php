@@ -10,6 +10,10 @@ use App\Models\Ourclients;
 use App\Models\Ourgallary;
 use App\Models\aboutus;
 use App\Models\ourteam;
+use App\Models\faq;
+use App\Models\business;
+use App\Models\ourservice;
+use App\Models\testimonial;
 use App\Models\Core\Users;
 use App\Models\ourachivement;
 use App\Models\Websitesettings;
@@ -224,6 +228,37 @@ public function savecareer(Request $request ){
        
 		$data['setting'] = Websitesettings::where('id', 1)->first();
 		return view('layouts.default.template.ourteam', $data);
+    }
+
+    public function faq_s(){
+        $data['title'] = 'FAQs';
+		$data['faqs'] = faq::where('status', 1)->orderBy('id', 'DESC')->get();
+		$data['setting'] = Websitesettings::where('id', 1)->first();
+		return view('layouts.default.template.faq', $data);
+    }
+
+    public function testimonial_s(){
+        $data['title'] = 'Testimonial';
+		$data['testimonials'] = testimonial::where('status', 1)->orderBy('id', 'DESC')->get();
+		$data['setting'] = Websitesettings::where('id', 1)->first();
+		return view('layouts.default.template.testimonial', $data);
+    }
+
+    public function service(){
+        $data['title'] = 'Services';
+		$data['services'] = ourservice::where('status', 1)->orderBy('id', 'DESC')->get();
+		$data['setting'] = Websitesettings::where('id', 1)->first();
+		return view('layouts.default.template.ourservice', $data);
+    }
+    
+    
+    public function singleService($id){
+        $service = ourservice::find($id);
+        $data['title'] = $service->service_name;
+        $data['service'] = $service;
+		$data['services'] = ourservice::where('status', 1)->orderBy('id', 'DESC')->get();
+		$data['setting'] = Websitesettings::where('id', 1)->first();
+		return view('layouts.default.template.service-details', $data);
     }
     
     

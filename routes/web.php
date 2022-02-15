@@ -89,9 +89,15 @@ Route::get('getmedicine/{id}','CitController@getMedicineById');
 Route::post('sendmail','VmslController@contact_email')->name('contact.email');
 
 
-
 //kfa
 Route::get('about','VmslController@about')->name('about');
 
 Route::get('meet-our-team','VmslController@meet_our_team')->name('meet.our.team');
 
+Route::get('faq-s','VmslController@faq_s')->name('faq.s');
+
+Route::get('testimonial-s','VmslController@testimonial_s')->name('testimonial.s');
+
+Route::get('services','VmslController@service')->name('services');
+
+Route::get('service-details/{id}','VmslController@singleService')->name('service.details');

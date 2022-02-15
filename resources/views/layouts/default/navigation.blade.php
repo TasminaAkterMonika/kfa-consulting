@@ -90,19 +90,16 @@
                                             <ul class="submenu">
                                                 <li><a href="{{ route('about') }}">About Company</a></li>
                                                 <li><a href="{{route('meet.our.team')}}">Meet Our Team</a></li>
-                                                <li><a href="faq.html">FAQ’s</a></li>
-                                                <li><a href="testimonials.html">Testimonials</a></li>
+                                                <li><a href="{{route('faq.s')}}">FAQ’s</a></li>
+                                                <li><a href="{{route('testimonial.s')}}">Testimonials</a></li>
                                             </ul>
                                         </li>
 
-                                        <li class="dropdown"><a href="servie.html">services</a>
+                                        <li class="dropdown"><a href="{{route('services')}}">services</a>
                                             <ul class="submenu">
-                                                <li><a href="business-growth.html">Business Growth</a></li>
-                                                <li><a href="sustainability.html">Sustainability</a></li>
-                                                <li><a href="performance.html">Performance</a></li>
-                                                <li><a href="advanced-analytics.html">Advanced Analytics</a></li>
-                                                <li><a href="organization.html">Organization</a></li>
-                                                <li><a href="customer-insights.html">Customer Insights</a></li>
+                                                @foreach(DB::TABLE('our_service')->where('status', 1)->orderBy('id', 'DESC')->get() AS $row)
+                                                <li><a href="{{route('service.details',$row->id)}}">{{ $row->service_name }}</a></li>
+                                                @endforeach
                                             </ul>
 
                                         </li>
