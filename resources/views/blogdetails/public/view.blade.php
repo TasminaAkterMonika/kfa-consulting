@@ -24,14 +24,14 @@
 					</tr>
 				
 					<tr>
-						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Icon', (isset($fields['icon']['language'])? $fields['icon']['language'] : array())) }}</td>
-						<td>{{ $row->icon}} </td>
+						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Date', (isset($fields['date']['language'])? $fields['date']['language'] : array())) }}</td>
+						<td>{{ $row->date}} </td>
 						
 					</tr>
 				
 					<tr>
-						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Service Name', (isset($fields['service_name']['language'])? $fields['service_name']['language'] : array())) }}</td>
-						<td>{{ $row->service_name}} </td>
+						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Title', (isset($fields['title']['language'])? $fields['title']['language'] : array())) }}</td>
+						<td>{{ $row->title}} </td>
 						
 					</tr>
 				
@@ -44,6 +44,30 @@
 					<tr>
 						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Description', (isset($fields['description']['language'])? $fields['description']['language'] : array())) }}</td>
 						<td>{{ $row->description}} </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Author', (isset($fields['author']['language'])? $fields['author']['language'] : array())) }}</td>
+						<td>{{ $row->author}} </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Consulting', (isset($fields['consulting']['language'])? $fields['consulting']['language'] : array())) }}</td>
+						<td>{{ $row->consulting}} </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Comment', (isset($fields['comment']['language'])? $fields['comment']['language'] : array())) }}</td>
+						<td>{{ $row->comment}} </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('React', (isset($fields['react']['language'])? $fields['react']['language'] : array())) }}</td>
+						<td>{{ $row->react}} </td>
 						
 					</tr>
 				

@@ -104,7 +104,7 @@
 
                                         </li>
 
-                                        <li class="dropdown"><a href="#">blog</a>
+                                        <li class="dropdown"><a href="{{route('blogs')}}">blog</a>
                                             <ul class="submenu">
                                                 <li><a href="blog-default.html">Blog Default</a></li>
                                                 <li><a href="blog-large.html">Blog Large Image</a></li>

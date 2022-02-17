@@ -13,6 +13,7 @@ use App\Models\ourteam;
 use App\Models\faq;
 use App\Models\business;
 use App\Models\ourservice;
+use App\Models\blogdetails;
 use App\Models\testimonial;
 use App\Models\Core\Users;
 use App\Models\ourachivement;
@@ -261,7 +262,22 @@ public function savecareer(Request $request ){
 		return view('layouts.default.template.service-details', $data);
     }
     
-    
+    public function blog_details(){
+        $data['title'] = 'Blog Details';
+		$data['blogs'] = blogdetails::where('status', 1)->orderBy('id', 'DESC')->get();
+		$data['setting'] = Websitesettings::where('id', 1)->first();
+        return view('layouts.default.template.blogdetails', $data);
+    }
+
+    // public function blog($id){
+    //     $service = blogdetails::find($id);
+    //     $data['title'] = $service->service_name;
+    //     $data['service'] = $service;
+	// 	$data['services'] = blogdetails::where('status', 1)->orderBy('id', 'DESC')->get();
+	// 	$data['setting'] = Websitesettings::where('id', 1)->first();
+	// 	return view('layouts.default.template.singleblog', $data);
+    // }
+
 	public function career(){
 	    $data['title'] = 'Career';
 	    $data['setting'] = Websitesettings::where('id', 1)->first();

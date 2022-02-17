@@ -1,6 +1,6 @@
 
 
-		 {!! Form::open(array('url'=>'ourservice', 'class'=>'form-horizontal','files' => true , 'parsley-validate'=>'','novalidate'=>' ')) !!}
+		 {!! Form::open(array('url'=>'blogdetails', 'class'=>'form-horizontal','files' => true , 'parsley-validate'=>'','novalidate'=>' ')) !!}
 
 	@if(Session::has('messagetext'))
 	  
@@ -15,7 +15,7 @@
 
 
 <div class="col-md-12">
-						<fieldset><legend> Services</legend>
+						<fieldset><legend> Blog Details</legend>
 				{!! Form::hidden('id', $row['id']) !!}					
 									  <div class="form-group row  " >
 										<label for="Image" class=" control-label col-md-4 text-left"> Image </label>
@@ -27,7 +27,7 @@
 						    <input type="file" name="image" class="upload"   accept="image/x-png,image/gif,image/jpeg"     />
 						</div>
 						<div class="image-preview preview-upload">
-							{!! SiteHelpers::showUploadedFile( $row["image"],"/uploads/images/service") !!}
+							{!! SiteHelpers::showUploadedFile( $row["image"],"/uploads/images/blog") !!}
 						</div>
 					 
 										 </div> 
@@ -36,19 +36,19 @@
 										 </div>
 									  </div> 					
 									  <div class="form-group row  " >
-										<label for="Icon" class=" control-label col-md-4 text-left"> Icon </label>
+										<label for="Date" class=" control-label col-md-4 text-left"> Date </label>
 										<div class="col-md-6">
-										  <input  type='text' name='icon' id='icon' value='{{ $row['icon'] }}' 
-						     class='form-control form-control-sm ' /> 
+										  <textarea name='date' rows='5' id='date' class='form-control form-control-sm '  
+				           >{{ $row['date'] }}</textarea> 
 										 </div> 
 										 <div class="col-md-2">
 										 	
 										 </div>
 									  </div> 					
 									  <div class="form-group row  " >
-										<label for="Service Name" class=" control-label col-md-4 text-left"> Service Name </label>
+										<label for="Title" class=" control-label col-md-4 text-left"> Title </label>
 										<div class="col-md-6">
-										  <input  type='text' name='service_name' id='service_name' value='{{ $row['service_name'] }}' 
+										  <input  type='text' name='title' id='title' value='{{ $row['title'] }}' 
 						     class='form-control form-control-sm ' /> 
 										 </div> 
 										 <div class="col-md-2">
@@ -70,6 +70,46 @@
 										<div class="col-md-6">
 										  <textarea name='description' rows='5' id='editor' class='form-control form-control-sm editor '  
 						 >{{ $row['description'] }}</textarea> 
+										 </div> 
+										 <div class="col-md-2">
+										 	
+										 </div>
+									  </div> 					
+									  <div class="form-group row  " >
+										<label for="Author" class=" control-label col-md-4 text-left"> Author </label>
+										<div class="col-md-6">
+										  <input  type='text' name='author' id='author' value='{{ $row['author'] }}' 
+						     class='form-control form-control-sm ' /> 
+										 </div> 
+										 <div class="col-md-2">
+										 	
+										 </div>
+									  </div> 					
+									  <div class="form-group row  " >
+										<label for="Consulting" class=" control-label col-md-4 text-left"> Consulting </label>
+										<div class="col-md-6">
+										  <input  type='text' name='consulting' id='consulting' value='{{ $row['consulting'] }}' 
+						     class='form-control form-control-sm ' /> 
+										 </div> 
+										 <div class="col-md-2">
+										 	
+										 </div>
+									  </div> 					
+									  <div class="form-group row  " >
+										<label for="Comment" class=" control-label col-md-4 text-left"> Comment </label>
+										<div class="col-md-6">
+										  <input  type='text' name='comment' id='comment' value='{{ $row['comment'] }}' 
+						     class='form-control form-control-sm ' /> 
+										 </div> 
+										 <div class="col-md-2">
+										 	
+										 </div>
+									  </div> 					
+									  <div class="form-group row  " >
+										<label for="React" class=" control-label col-md-4 text-left"> React </label>
+										<div class="col-md-6">
+										  <input  type='text' name='react' id='react' value='{{ $row['react'] }}' 
+						     class='form-control form-control-sm ' /> 
 										 </div> 
 										 <div class="col-md-2">
 										 	
@@ -103,7 +143,7 @@
 	$(document).ready(function() { 
 		
 		
-		$("#status").jCombo("{!! url('ourservice/comboselect?filter=status:id:title') !!}",
+		$("#status").jCombo("{!! url('blogdetails/comboselect?filter=status:id:title') !!}",
 		{  selected_value : '{{ $row["status"] }}' });
 		 
 

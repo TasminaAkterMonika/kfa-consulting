@@ -60,7 +60,7 @@
                                 </div>
                                     
                                 <div class="text">
-                                   {{ $service->description }}
+                                   {{ $service->short_description }}
                                 </div>
                                 <div class="link">
                                     <a href="#" class="default_link">READ MORE <i class="fa fa-angle-right"></i></a>

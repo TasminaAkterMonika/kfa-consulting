@@ -2,11 +2,7 @@
 <body>
 
 <div class="boxed_wrapper">
-
 @include('layouts.default.navigation')
-
- 
-
 
 <div class="inner-banner has-base-color-overlay text-center" style="background: url(images/background/1.jpg);">
     <div class="container">
@@ -22,10 +18,10 @@
                         <a href="index.html">Home</a>
                     </li>
                     <li>
-                        <a href="servie.html">Services</a>
+                        <a href="{{route('services')}}">Services</a>
                     </li>
                     <li>
-                        Business Growth
+                     {!! $service->service_name !!}   
                     </li>
                 </ul>
             </div>
@@ -45,18 +41,25 @@
             <div class="col-md-3">
             
                 <div class="service-sidebar">
+          
                     <ul class="service-catergory">
+                                 
 
-                        <li class="active"><a href="business-growth.html">Business Growth</a></li>
+                 <ul class="submenu">  
+                                @foreach(DB::TABLE('our_service')->where('status', 1)->orderBy('id', 'DESC')->get() AS $row)
+                                <li><a href="{{route('service.details',$row->id)}}">{{ $row->service_name }}</a></li>
+                                @endforeach
+                            
+                            </ul>
+                                   
+                        {{-- <li class="active"><a href="business-growth.html">Business Growth</a></li>
                         <li><a href="sustainability.html">Sustainability</a></li>
                         <li><a href="performance.html">Performance</a></li>
                         <li><a href="advanced-analytics.html">Advanced Analytics</a></li>
                         <li><a href="organization.html">Organization</a></li>
-                        <li><a href="customer-insights.html">Customer Insights</a></li>
-
-                    </ul>
-                        
-                    <br><br>
+                        <li><a href="customer-insights.html">Customer Insights</a></li> --}}
+                   </ul>
+                    {{-- <br><br>
                     <div class="brochures"> 
                         <h4>Our Brochures</h4>
                         <p>Download our comapny profile & 2016 financial brochure.</p>
@@ -79,8 +82,7 @@
                             <a href="#" class="default_link">LOCATE US<i class="fa fa-angle-right"></i></a>
                         </div>
                         <i class="icon icon-multimedia-1"></i>
-                    </div>
-
+                    </div> --}}
                 </div>
             </div>
             <div class="col-md-9">

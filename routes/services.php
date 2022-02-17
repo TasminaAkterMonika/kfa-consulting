@@ -45,13 +45,18 @@ Route::resource('services/testimonial','Services\TestimonialController');
 // End Routes for testimonial 
 
                     
+// Start Routes for ourteam 
+Route::resource('services/ourteam','Services\OurteamController');
+// End Routes for ourteam 
+
+                    
 // Start Routes for ourservice 
 Route::resource('services/ourservice','Services\OurserviceController');
 // End Routes for ourservice 
 
                     
-// Start Routes for ourteam 
-Route::resource('services/ourteam','Services\OurteamController');
-// End Routes for ourteam 
+// Start Routes for blogdetails 
+Route::resource('services/blogdetails','Services\BlogdetailsController');
+// End Routes for blogdetails 
 
                     ?>

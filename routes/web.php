@@ -101,3 +101,7 @@ Route::get('testimonial-s','VmslController@testimonial_s')->name('testimonial.s'
 Route::get('services','VmslController@service')->name('services');
 
 Route::get('service-details/{id}','VmslController@singleService')->name('service.details');
+
+Route::get('blogs','VmslController@blog_details')->name('blogs');
+
+// Route::get('blogdetails/{id}','VmslController@blog')->name('blogdetails');
