@@ -48,7 +48,7 @@
                             <div class="default-blog-news wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
                                
                                 <div class="img-box">
-                                    <a href="#"><img src="{{ asset('uploads')}}/images/blog/{{ $blog->image }}"" alt=""></a>
+                                    <a href="{{ route('single.blog',$blog->id)}}"><img src="{{ asset('uploads')}}/images/blog/{{ $blog->image }}" alt=""></a>
                                 </div>
                                 <div class="lower-content">
                                     <div class="date center">{{$blog->date}}</div>

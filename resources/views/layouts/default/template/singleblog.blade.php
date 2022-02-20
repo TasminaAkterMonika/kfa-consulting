@@ -5,8 +5,6 @@
 @include('layouts.default.navigation')
 
 
- 
-
 <div class="inner-banner has-base-color-overlay text-center" style="background: url(images/background/1.jpg);">
     <div class="container">
         <div class="box">
@@ -44,7 +42,7 @@
                 <section class="blog-section">
                     <div class="default-blog-news single-blog-post single-blog wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
                         <div class="img-box">
-                            <a href="blog-details.html"><img src="images/blog/8.jpg" alt="News"></a>
+                            <a href="blog-details.html"><img src="{{ asset('uploads')}}/images/blog/{{ $blog->image }}" width="770px" alt="News"></a>
                         </div>
                         <div class="lower-content">
                             <h3><a href="blog-details.html">Seminar for improve your business profit & loss</a></h3>
@@ -403,6 +401,8 @@
         </div>
     </div>
 </div>
+
+
 @include('layouts.default.footer')
 
 

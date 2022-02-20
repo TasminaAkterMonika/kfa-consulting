@@ -59,4 +59,9 @@ Route::resource('ourservice','OurserviceController');
 Route::resource('blogdetails','BlogdetailsController');
 // End Routes for blogdetails 
 
+                    
+// Start Routes for projectdetails 
+Route::resource('projectdetails','ProjectdetailsController');
+// End Routes for projectdetails 
+
                     ?>

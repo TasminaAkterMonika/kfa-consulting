@@ -15,6 +15,7 @@ use App\Models\business;
 use App\Models\ourservice;
 use App\Models\blogdetails;
 use App\Models\testimonial;
+use App\Models\projectdetails;
 use App\Models\Core\Users;
 use App\Models\ourachivement;
 use App\Models\Websitesettings;
@@ -269,14 +270,30 @@ public function savecareer(Request $request ){
         return view('layouts.default.template.blogdetails', $data);
     }
 
-    // public function blog($id){
-    //     $service = blogdetails::find($id);
-    //     $data['title'] = $service->service_name;
-    //     $data['service'] = $service;
-	// 	$data['services'] = blogdetails::where('status', 1)->orderBy('id', 'DESC')->get();
-	// 	$data['setting'] = Websitesettings::where('id', 1)->first();
-	// 	return view('layouts.default.template.singleblog', $data);
-    // }
+    public function single_blog($id){
+        $blog = blogdetails::find($id);
+        $data['title'] = $blog->title;
+        $data['blog'] = $blog;
+		$data['blogs'] = blogdetails::where('status', 1)->orderBy('id', 'DESC')->get();
+		$data['setting'] = Websitesettings::where('id', 1)->first();
+		return view('layouts.default.template.singleblog', $data);
+    }
+
+    public function project_details(){
+        $data['title'] = 'Project Details';
+		$data['projects'] = projectdetails::where('status', 1)->orderBy('id', 'DESC')->get();
+		$data['setting'] = Websitesettings::where('id', 1)->first();
+		return view('layouts.default.template.projectdetails', $data);
+    }
+
+    public function single_project($id){
+        $project = projectdetails::find($id);
+        $data['title'] = $project->title;
+        $data['project'] = $project;
+		$data['projects'] = projectdetails::where('status', 1)->orderBy('id', 'DESC')->get();
+		$data['setting'] = Websitesettings::where('id', 1)->first();
+		return view('layouts.default.template.singleproject', $data);
+    }
 
 	public function career(){
 	    $data['title'] = 'Career';

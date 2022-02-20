@@ -104,4 +104,8 @@ Route::get('service-details/{id}','VmslController@singleService')->name('service
 
 Route::get('blogs','VmslController@blog_details')->name('blogs');
 
-// Route::get('blogdetails/{id}','VmslController@blog')->name('blogdetails');
+Route::get('single/blog/{id}','VmslController@single_blog')->name('single.blog');
+
+Route::get('projects','VmslController@project_details')->name('projects');
+
+Route::get('single/project/{id}','VmslController@single_project')->name('single.project');

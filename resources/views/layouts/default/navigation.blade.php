@@ -105,17 +105,11 @@
                                         </li>
 
                                         <li class="dropdown"><a href="{{route('blogs')}}">blog</a>
-                                            <ul class="submenu">
-                                                <li><a href="blog-default.html">Blog Default</a></li>
-                                                <li><a href="blog-large.html">Blog Large Image</a></li>
-                                                <li><a href="blog-details.html">Blog Single Post</a></li>
-                                            </ul>
+                                          
+                                          
                                         </li>
-                                        <li class="dropdown"><a href="#">PROJECTS</a>
-                                            <ul class="submenu">
-                                                <li><a href="projects.html">Our Projects</a></li>
-                                                <li><a href="projects-single.html">Projects Single</a></li>
-                                            </ul>
+                                        <li class="dropdown"><a href="{{route('projects')}}">PROJECTS</a>
+                                            
                                         </li>
 
                                         <li class="dropdown"><a href="#">SHOP</a>
